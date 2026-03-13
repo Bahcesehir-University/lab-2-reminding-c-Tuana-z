@@ -1,4 +1,4 @@
-#include <iostream>
+ #include <iostream>
 #include <vector>
 #include <string>
 
@@ -14,7 +14,7 @@ int addNumbers(int a, int b)
 {
     // TODO
     // Return the sum of a and b
-
+return a+b;
 }
 
 
@@ -30,6 +30,12 @@ int sumUpToN(int n)
     // TODO
     // Using a loop calculate the sum
     // 1 + 2 + 3 + ... + n
+    int sum=0;
+   for(int i=1; i<=n; i++)
+{
+    sum+=i;
+}
+return sum;
 }
 
 
@@ -44,6 +50,16 @@ int findMaximum(vector<int> numbers)
 {
     // TODO
     // Return the largest number in the vector
+    int maxValue =numbers[0];
+for(int i=1;i <numbers.size();i++ )
+   {  if(numbers[i]> maxValue)
+{
+    maxValue=numbers[i];
+}
+   }
+
+    return maxValue;
+    
 }
 
 
@@ -58,6 +74,12 @@ string reverseString(string text)
 {
     // TODO
     // Return the reversed version of the string
+    string reversed="";
+   for(int i=text.length()-1; i>=0 ; i--)
+   {
+       reversed +=text[i];
+   }
+   return reversed;
 }
 
 
@@ -79,6 +101,11 @@ public:
     // TODO
     // Create a constructor that receives
     // name and grade
+     Student(string n,int g)
+     {
+         name=n;
+         grade=g;
+     }
 
 
     // TODO
@@ -86,6 +113,11 @@ public:
     // that prints:
     // Name: <name>
     // Grade: <grade>
+    void printInfo()
+    {
+        cout<<"name:"<<name<<endl;
+        cout<<"grade:"<<grade<<endl;
+    }
 
 };
 
